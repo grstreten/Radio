@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-615" y="115"/>
         </scene>
-        <!--Radio-->
+        <!--Car Control-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Radio" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,38 +80,18 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Og4-gO-IWs"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.080000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AR-xo-DUn">
-                                <rect key="frame" x="0.0" y="536.5" width="375" height="130.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130.5" id="7ez-r4-i6Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="109"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12813714378238339" green="0.12813714378238339" blue="0.12813714378238339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="guB-LL-ZIc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FBX-j3-TQe"/>
                             <constraint firstItem="guB-LL-ZIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HG4-Im-0Nm"/>
-                            <constraint firstItem="0AR-xo-DUn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="KJ9-GU-lX4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0AR-xo-DUn" secondAttribute="bottom" id="NeM-Zx-Rl6"/>
                             <constraint firstAttribute="trailing" secondItem="guB-LL-ZIc" secondAttribute="trailing" id="drf-SC-FvV"/>
-                            <constraint firstItem="0AR-xo-DUn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vcd-sq-VkY"/>
                             <constraint firstItem="guB-LL-ZIc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="yJQ-1m-u7v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Radio" id="lVz-Dy-Fym">
-                        <barButtonItem key="rightBarButtonItem" image="Map" style="plain" id="mAz-Qa-vpj">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="openMap:" destination="BYZ-38-t0r" id="041-eu-MRn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Car Control" id="lVz-Dy-Fym"/>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="guB-LL-ZIc" id="rS9-bU-cCp"/>
-                        <outlet property="timeLabel" destination="0AR-xo-DUn" id="Ccu-nb-CH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,7 +100,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Map" width="18" height="18"/>
         <image name="Pause" width="490" height="490"/>
     </resources>
 </document>

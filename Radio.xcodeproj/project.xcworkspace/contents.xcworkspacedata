@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Radio.xcodeproj">
+      location = "self:/Users/gstrets/Documents/Developer/Apps/Radio/Radio.xcodeproj">
    </FileRef>
 </Workspace>
