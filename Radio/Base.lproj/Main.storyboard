@@ -55,10 +55,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="187" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZF-Ni-iHa">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZF-Ni-iHa">
                                                     <rect key="frame" x="0.0" y="0.0" width="187" height="182"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" alpha="0.0" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pause" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-KC-owW">
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pause" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-KC-owW">
                                                     <rect key="frame" x="0.0" y="0.0" width="187" height="182"/>
                                                 </imageView>
                                             </subviews>
