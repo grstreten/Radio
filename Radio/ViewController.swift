@@ -46,6 +46,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         updateUI()
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateUI), userInfo: nil, repeats: true)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     func updateUI(){
@@ -142,7 +144,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.width/2)
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/4)
+        } else if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
+            return CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.width/2)
+        } else {
+            return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/4)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -154,9 +162,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return item
     }
     
+    func rotated(){
+        if (UIDevice.current.orientation != UIDeviceOrientation.faceDown) && (UIDevice.current.orientation != UIDeviceOrientation.faceUp) && (UIDevice.current.orientation != UIDeviceOrientation.unknown) {
+            collectionViewOutlet.reloadData()
+            NSLog("Rotated device")
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return UIStatusBarStyle.lightContent
     }
 
 }
 
+extension UINavigationController {
+    
+    open override var shouldAutorotate : Bool {
+        return true
+    }
+    
+    open override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return [.portrait, .portraitUpsideDown, .landscapeLeft, .landscapeRight]
+    }
+}
