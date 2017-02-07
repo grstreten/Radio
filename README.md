@@ -1,6 +1,8 @@
 # Radio
 _Radio streams for the dashboard of your car. Simples._
 
+Yes this looks hella ugly at the moment - working on redoing design at some point soon.
+
 ### Features
 * Lists and plays each radio station in the tiles array
  * Currently BBC R1, BBC R2, Mix 94.5 and 97.3 Coast FM
